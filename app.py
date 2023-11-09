@@ -49,7 +49,7 @@ def add_user():
     if not request.json or not 'name' in request.json:
         abort(400)
     
-    name = request.json('name')
+    name = request.json.get('name', '')
     fullname = request.json.get('fullname', '')
     user = User(name = name, fullname = fullname)
 

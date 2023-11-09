@@ -8,5 +8,29 @@
 <body>
     <input type="text" name="name" id="name_field">
     <input type="text" name="fullname" id="fullname_field">
+    <button type="submit" id="submit_button">Add</button>
+    <script>
+        const button = document.getElementById('submit_button')
+        const name_field = document.getElementById('name_field').value
+        const fullname_field = document.getElementById('fullname_field').value
+
+        button.addEventListener('click', async _ => {
+            try {
+                const response = await fetch('user', {
+                    method: 'post',
+                    body: JSON.stringify({
+                        'name': document.getElementById('name_field').value,
+                        'fullname': document.getElementById('fullname_field').value
+                    }),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                })
+                console.log('Success')
+            } catch(err) {
+                console.error('Error: ${err}')
+            }
+        })
+    </script>
 </body>
 </html>
