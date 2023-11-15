@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ name }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/main.css">
+  <!-- <link rel="stylesheet" href="../static/user.css"> -->
+  <title>{{ name }}</title>
 </head>
 <body>
-    <h1>{{ name }}</h1>
-    <h2>{{ fullname }}</h2>
+  <a class="back-arrow" href="/users"><</a>
+  <h3>User: {{ name }}</h3>
+  <p>User's full name: {{ fullname }}</p>
 </body>
 </html>
