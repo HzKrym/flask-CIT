@@ -1,36 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add User</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/main.css">
+  <!-- <link rel="stylesheet" href="../static/add_user.css"> -->
+  <title>Add User</title>
 </head>
 <body>
+  <a class="back-arrow" href="/"><</a>
+  <h3>Add user:</h3>
+  <form>
     <input type="text" name="name" id="name_field">
+    <br />
     <input type="text" name="fullname" id="fullname_field">
-    <button type="submit" id="submit_button">Add</button>
-    <script>
-        const button = document.getElementById('submit_button')
-        const name_field = document.getElementById('name_field').value
-        const fullname_field = document.getElementById('fullname_field').value
-
-        button.addEventListener('click', async _ => {
-            try {
-                const response = await fetch('user', {
-                    method: 'post',
-                    body: JSON.stringify({
-                        'name': document.getElementById('name_field').value,
-                        'fullname': document.getElementById('fullname_field').value
-                    }),
-                    headers: {
-                        "Content-type": "application/json; charset=UTF-8"
-                    }
-                })
-                console.log('Success')
-            } catch(err) {
-                console.error('Error: ${err}')
-            }
-        })
-    </script>
+    <br />
+    <button type="button" id="submit_button">Add</button>
+  </form>
 </body>
+  <script src="../static/add_user.js"></script>
 </html>

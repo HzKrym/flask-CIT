@@ -1,0 +1,95 @@
+* {
+  color: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #252525;
+}
+
+.back-arrow {
+  background: #f2f2f2;
+  color: #000;
+  padding: 0px 6px 4px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.back-arrow:hover {
+  background: plum;
+  color: initial;
+}
+
+h3 {
+  text-align: center;
+  margin: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background: plum;
+  color: #000;
+}
+
+ul {
+  width: fit-content;
+  margin: 8px;
+  list-style: none;
+}
+
+li {
+  text-align: center;
+  margin-left: -40px;
+  padding: 8px 16px;
+  border: #f2f2f2 solid 2px;
+  border-radius: 8px;
+}
+
+li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+li:hover {
+  border: plum solid 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: plum;
+}
+
+form {
+  text-align: center;
+  max-width: fit-content;
+  padding: 32px 16px 64px;
+  margin: 8px;
+  border-radius: 8px;
+  border: #f2f2f2 groove 1px;
+  background: transparent
+}
+
+form * {
+  margin: 2px;
+  padding: 2px 8px 4px;
+  border: #f2f2f2 solid 2px;
+  border-radius: 8px;
+  background: transparent;
+  color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+}
+
+input:focus {
+  border: plum solid 2px;
+}
+
+form button {
+  margin-top: 8px;
+  padding: 2px 14px 4px;
+}
+
+form button:hover {
+  border: plum solid 2px;
+}
